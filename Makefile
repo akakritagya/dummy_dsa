@@ -25,7 +25,7 @@ release: CFLAGS += $(RELFLAGS)
 release: $(TARGET)
 
 $(TARGET): $(OBJS)
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^ -lm
 
 # Compile each .c, creating build subdirs as needed
 $(BUILDDIR)/%.o: %.c
